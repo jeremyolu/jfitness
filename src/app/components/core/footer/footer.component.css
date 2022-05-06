@@ -1,0 +1,19 @@
+.footer-content {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content h4 {
+    font-size: 18px;
+    color: yellow;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+
+
+.footer-content li.footer-link a {
+  
+}

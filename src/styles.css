@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Squada One', cursive;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.highlight {
+    color: #FFFF00;
+}
+
+.border-line {
+    background-color: yellow;
+    width: 200px;
+    height: 2px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
