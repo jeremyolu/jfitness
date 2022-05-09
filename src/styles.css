@@ -8,17 +8,12 @@ body {
     font-family: 'Squada One', cursive;
 }
 
-a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
 .highlight {
     color: #FFFF00;
 }
 
 .border-line {
-    background-color: yellow;
+    background-color: #FFFF00;
     width: 200px;
     height: 2px;
     text-align: center;

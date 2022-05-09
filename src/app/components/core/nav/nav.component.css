@@ -1,0 +1,50 @@
+.main-nav-content {
+    background: rgba(0,0,0,0.2);
+}
+
+a.navbar-brand {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a.navbar-brand a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.main-nav-content-links a.nav-link {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF ;
+}
+
+.main-nav-content-links li {
+    padding: 5px;
+}
+
+.main-nav-content-links a:hover {
+    color: #FFF000;
+}
+
+i.search-btn, i.shopping-cart-btn {
+    cursor: pointer;
+}
+
+.mobile-nav-btn {
+    display: none;
+}
+
+.mobile-nav-btn i.fa-bars {
+    color: #FFFFFF;
+}
+
+/*Responsive styles*/
+
+@media screen and (max-width: 991px) {
+
+    .mobile-nav-btn {
+        display: block;
+    }
+}
