@@ -1,8 +1,76 @@
 <div class="wrapper">
-    <header>
-        <app-header></app-header>
-    </header>
-
+    <nav>
+        <nav class="main-nav-content navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" routerLink="home">J<span class="highlight">FIT</span>NESS</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="main-nav-content-links navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="mens" routerLinkActive="active">Mens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="womens" routerLinkActive="active">Womens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="accessories" routerLinkActive="active">Accessories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="sale" routerLinkActive="active">Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="search" routerLinkActive="search"><i class="fa fa-search search-btn" aria-hidden="true"></i> SEARCH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="basket-btn-link" class="nav-link" (click)="toggleShoppingBasket(ShoppingBasketModal)"><i class="fa fa-shopping-cart shopping-cart-btn" aria-hidden="true"></i> BASKET (0)</a>
+                        </li>
+                    </ul>
+                </div>
+            <button class="btn mobile-nav-btn" (click)="toggleMobileNav(MenuNavigation)"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            </div>
+        </nav>
+        
+        <div class="mobile-nav-content">
+            <ng-template #MenuNavigation let-offcanvas>
+                <div class="offcanvas-body">
+                    <ul class="mobile-nav-links">
+                        <li class="mobile-nav-link"><a routerLink="mens" routerLinkActive="active">MENS</a></li>
+                        <li class="mobile-nav-link"><a routerLink="womens" routerLinkActive="active">WOMENS</a></li>
+                        <li class="mobile-nav-link"><a routerLink="accessories" routerLinkActive="active">ACCESSORIES</a></li>
+                        <li class="mobile-nav-link"><a routerLink="sale" routerLinkActive="active">SALES</a></li>
+                        <li class="mobile-nav-link"><a routerLink="search" routerLinkActive="active">SEARCH</a></li>
+                        <li class="mobile-nav-link"><a routerLink="basket" routerLinkActive="active"><i class="fa fa-shopping-cart shopping-cart-btn" aria-hidden="true"></i> BASKET (0)</a></li>
+                    </ul>
+                </div>
+            </ng-template>
+        </div>
+        
+        <div class="search-content">
+            <ng-template #SearchModal let-offcanvas>
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title">Search Products</h4>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+            </ng-template>
+        </div>
+        
+        <div class="shopping-basket-content">
+            <ng-template #ShoppingBasketModal let-offcanvas>
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title">Shopping Basket</h4>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p>One fine body&hellip;</p>
+                    <div class="text-end">
+                        <button type="button" class="btn btn-outline-dark" (click)="offcanvas.close('Close click')">Close</button>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </nav>
     <div class="main">
         <router-outlet></router-outlet>
     </div>
