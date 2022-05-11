@@ -4,9 +4,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="main-nav-content-links navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#">Men</a>
                 </li>
                 <li class="nav-item">
@@ -19,10 +16,10 @@
                     <a class="nav-link">Sale</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-search search-btn" (click)="toggleSearch(SearchModal)" aria-hidden="true"></i></a>
+                    <a class="nav-link"><i class="fa fa-search search-btn" aria-hidden="true"></i> SEARCH</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-shopping-cart shopping-cart-btn" (click)="toggleShoppingBasket(ShoppingBasketModal)" aria-hidden="true"></i></a>
+                    <a id="basket-btn-link" class="nav-link" (click)="toggleShoppingBasket(ShoppingBasketModal)"><i class="fa fa-shopping-cart shopping-cart-btn" aria-hidden="true"></i> BASKET (0)</a>
                 </li>
             </ul>
         </div>
@@ -32,15 +29,15 @@
 
 <div class="mobile-nav-content">
     <ng-template #MenuNavigation let-offcanvas>
-        <div class="offcanvas-header">
-            <h4 class="offcanvas-title">mmmm title</h4>
-            <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
-        </div>
         <div class="offcanvas-body">
-            <p>One fine body&hellip;</p>
-            <div class="text-end">
-                <button type="button" class="btn btn-outline-dark" (click)="offcanvas.close('Close click')">Close</button>
-            </div>
+            <ul class="mobile-nav-links">
+                <li class="mobile-nav-link"><a href="">MENS</a></li>
+                <li class="mobile-nav-link"><a href="">WOMENS</a></li>
+                <li class="mobile-nav-link"><a href="">ACCESSORIES</a></li>
+                <li class="mobile-nav-link"><a href="">SALES</a></li>
+                <li class="mobile-nav-link"><a href="">MORE</a></li>
+                <li class="mobile-nav-link"><a href=""><i class="fa fa-shopping-cart shopping-cart-btn" aria-hidden="true"></i> BASKET (0)</a></li>
+            </ul>
         </div>
     </ng-template>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewEncapsulation } from '@angular/core';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
