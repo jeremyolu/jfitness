@@ -5,6 +5,11 @@
     padding: 20px;
 }
 
+.footer-content a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 .footer-content h4 {
     font-size: 18px;
     color: yellow;

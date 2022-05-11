@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from 'src/app/models/product';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-mens',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MensComponent implements OnInit {
 
-  constructor() { }
+  data: any[] = [];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.loadProducts();
+
+  }
+
+  loadProducts() {
+    this.dataService.getProducts().subscribe((data: IProduct[]) => this.data = data);
   }
 
 }
