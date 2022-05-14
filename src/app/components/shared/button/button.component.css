@@ -1,0 +1,25 @@
+.black-btn {
+    background-color: #000000;
+    font-family: 'Squada One', cursive;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: 0;
+    outline: none;
+    width: 130px;
+    padding: 10px 0;
+    cursor: pointer;
+    margin: 20px 0 20px 0;
+}
+
+.yellow-btn {
+    background-color: #FFF000;
+    font-family: 'Squada One', cursive;
+    font-size: 20px;
+    color: #000000;
+    border: 0;
+    outline: none;
+    width: 130px;
+    padding: 10px 0;
+    cursor: pointer;
+    margin: 20px 0 20px 0;
+}

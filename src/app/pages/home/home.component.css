@@ -1,0 +1,26 @@
+.top-products-container {
+    text-align: center;
+}
+
+.products-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+}
+
+.product-information {
+    padding: 10px;
+}
+
+h4.product-name {
+    font-size: 23px;
+}
+
+p.product-description {
+    font-size: 18px;
+}
+
+p.product-price {
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -7,6 +7,7 @@ import { AccessoriesComponent } from './accessories/accessories.component';
 import { SaleComponent } from './sale/sale.component';
 import { BasketComponent } from './basket/basket.component';
 import { SearchComponent } from './search/search.component';
+import { SharedModule } from '../components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchComponent } from './search/search.component';
     SearchComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class PagesModule { }

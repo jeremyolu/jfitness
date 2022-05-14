@@ -13,7 +13,9 @@ export class DataService {
 
   private readonly baseUrl: string = "https://products.jeremyolu.com/api";
 
-  getProducts() : Observable<any>{
+  currencyType: string = "GBP";
+
+  getProducts() : Observable<any> {
     return this.httpClient.get<IProduct>(this.baseUrl + "/products")
     .pipe(map((data: any) => data.items));
   }
@@ -22,15 +24,15 @@ export class DataService {
 
   }
 
-  getMensProducts() {
+  getMensProducts(gender: string) {
 
   }
 
-  getWomensProducts() {
+  getWomensProducts(gender: string) {
 
   }
 
-  getProductsByName(name: string) : Observable<any>{
+  getProductsByName(name: string) : Observable<any> {
     return this.httpClient.get<any>(this.baseUrl + "/products?name=" + name);
   }
   

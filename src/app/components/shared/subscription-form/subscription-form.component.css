@@ -1,0 +1,52 @@
+.subscription-container {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(~src/assets/img/supplements.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+h1.subscription-title {
+    font-size: 40px;
+}
+
+p.subscription-description {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.subscription-container .input-field {
+    background: none;
+    font-family: 'Squada One', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border: 0;
+    border-bottom: 2px solid yellow;
+    outline: none;
+    padding: 10px;
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+.subscription-container .input-field::placeholder {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.subscription-container .input-button {
+    background-color: yellow;
+    font-family: 'Squada One', cursive;
+    font-size: 20px;
+    color: #000000;
+    border: 0;
+    outline: none;
+    width: 130px;
+    padding: 10px 0;
+    cursor: pointer;
+}

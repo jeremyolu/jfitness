@@ -1,1 +1,33 @@
-<p>home works!</p>
+<section class="notification">
+    <app-notification-banner [title]="notificationTxt" [isMarquee]="true" (btnClick)="test()"></app-notification-banner>
+</section>
+
+<header>
+    <app-header [title]="headerTitle"></app-header>
+</header>
+
+<section class="top-products-container">
+    <h2 class="heading">TOP PRODUCTS</h2>
+    <div *ngIf="isProductsLoading">
+        <app-loader [message]="loaderMessage"></app-loader>
+    </div>
+    <div class="products-grid-container">
+        <div *ngFor="let product of products">
+             <div class="product-item">
+                 <div class="product-image-container">
+                     <img class="product-image" src="{{product.imageUrl}}" width="300" height="380">
+                 </div>
+                 <div class="product-information">
+                     <h4 class="product-name">{{ product.name }}</h4>
+                     <p class="product-description">{{ product.description }}</p>
+                     <p class="product-price">£{{ product.price }}</p>
+                 </div>
+             </div>
+        </div>
+     </div>
+</section>
+
+<section class="subscription-form-container">
+    <app-subscription-form [title]="subscriptionTitle" [description]="subscriptionDescription"></app-subscription-form>
+</section>
+

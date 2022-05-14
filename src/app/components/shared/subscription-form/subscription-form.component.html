@@ -1,0 +1,8 @@
+<div class="subscription-container">
+    <h1 class="subcription-title">{{ title }}</h1>
+    <p class="subscription-description"> {{ description }}</p>
+    <form #subscriptionForm="ngForm" (ngSubmit)="submitEmail(subscriptionForm.value)">
+        <input type="text" class="input-field" [ngModel] name="email" placeholder="email @"/>
+        <input type="submit" class="input-button" value="sign up">
+    </form>
+</div>

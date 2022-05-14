@@ -1,0 +1,9 @@
+<div class="notification-bar" (click)="notificationBarClick()">
+    <div *ngIf="isMarquee">
+        <marquee>{{ title }}</marquee>
+    </div>
+
+    <div *ngIf="!isMarquee">
+        <small>{{ title }}</small>
+    </div>
+</div>
