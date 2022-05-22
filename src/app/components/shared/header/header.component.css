@@ -29,3 +29,33 @@
 .header-tag-heading {
     font-size: 30px;
 }
+
+@media screen and (max-width: 600px) {
+
+    .header-content .header-heading {
+        font-size: 53px !important;
+    }
+
+    .header-content .header-sub-heading {
+        font-size: 28px !important;
+    }
+
+    .header-content .header-tag-heading {
+        font-size: 23px !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .header-content .header-heading {
+        font-size: 45px !important;
+    }
+
+    .header-content .header-sub-heading {
+        font-size: 25px !important;
+    }
+
+    .header-content .header-tag-heading {
+        font-size: 22px !important;
+    }
+}

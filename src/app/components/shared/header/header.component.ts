@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,13 +15,14 @@ export class HeaderComponent implements OnInit {
   titleBtn: string = "Login";
   styleBtn: string = "yellow";
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
 
-  testFunction() {
-    console.log("testing function works");
+  navigateLogin() {
+
+    this.router.navigate(['login']);
   }
 
 }

@@ -20,20 +20,27 @@ export class DataService {
     .pipe(map((data: any) => data.items));
   }
 
-  getPopularProducts() {
-
-  }
-
-  getMensProducts(gender: string) {
-
-  }
-
-  getWomensProducts(gender: string) {
-
+  getProductById(id: number) : Observable<any> {
+    return this.httpClient.get<any>(this.baseUrl + "/products?id=" + id);
   }
 
   getProductsByName(name: string) : Observable<any> {
     return this.httpClient.get<any>(this.baseUrl + "/products?name=" + name);
+  }
+
+  getMensProducts() : Observable<any> {
+    return this.httpClient.get<IProduct>(this.baseUrl + "/products/maleproducts")
+    .pipe(map((data: any) => data.items));
+  }
+
+  getWomensProducts() : Observable<any> {
+    return this.httpClient.get<IProduct>(this.baseUrl + "/products/femaleproducts")
+    .pipe(map((data: any) => data.items));
+  }
+
+  getSaleProducts() : Observable<any> {
+    return this.httpClient.get<IProduct>(this.baseUrl + "/products/saleproducts")
+    .pipe(map((data: any) => data.items));
   }
   
 }

@@ -9,17 +9,21 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class MensComponent implements OnInit {
 
-  data: any[] = [];
+  maleProducts: IProduct[] = [];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
     this.loadProducts();
 
+   
+
   }
 
   loadProducts() {
-    this.dataService.getProducts().subscribe((data: IProduct[]) => this.data = data);
+    this.dataService.getMensProducts().subscribe((data: IProduct[]) => {
+      this.maleProducts = data;
+    });
   }
 
 }

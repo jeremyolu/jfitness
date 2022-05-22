@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
-  notificationTxt: string = "breaking news";
+  notificationTxt: string = "Enter jezza100 promo code at checkout for £10 off on orders over £50";
 
   products: IProduct[] = [];
 
